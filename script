@@ -1,0 +1,283 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.IO;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using Microsoft.Office.Interop.Excel;
+using Excel = Microsoft.Office.Interop.Excel;
+using System.Runtime.InteropServices;
+
+
+namespace excel_access_trial1
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        public void button7_Click(object sender, EventArgs e)
+        {
+            if (folderBrowserDialog2.ShowDialog() == DialogResult.OK) //pops up the  folder browser
+            {
+                pathbox1.Text = folderBrowserDialog2.SelectedPath;  //target folder is passed on to the pathbox
+                //string pb = pathbox1.Text;
+            }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            string pb = pathbox1.Text;
+
+            foreach (string f in Directory.GetFiles(pb)) //each file in directory
+            {
+                string i = Path.GetExtension(f);
+                if (i == ".txt")
+                {
+                    var excelApp = new Excel.Application();
+                    excelApp.Visible = true;
+                    Excel.Workbooks books = excelApp.Workbooks;
+                    Excel.Workbooks wb1 = excelApp.Workbooks;
+                    Excel.Workbook sheet1 = wb1.Open(f);
+                    excelApp.Range["AB130:AB897"].Value = excelApp.Range["LO130:LO897"].Value;
+
+                }
+            }
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            string pb = pathbox1.Text;
+
+            foreach (string f in Directory.GetFiles(pb)) //each file in directory
+            {
+                string i = Path.GetExtension(f);
+                if (i == ".txt")
+                {
+                    var excelApp = new Excel.Application();
+                    excelApp.Visible = true;
+                    Excel.Workbooks books = excelApp.Workbooks;
+                    Excel.Workbooks wb1 = excelApp.Workbooks;
+                    Excel.Workbook sheet1 = wb1.Open(f);
+                    excelApp.Range["AC130:AC897"].Value = excelApp.Range["LK130:LK897"].Value;
+                }
+            }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            string pb = pathbox1.Text;
+
+            foreach (string f in Directory.GetFiles(pb)) //each file in directory
+            {
+                string i = Path.GetExtension(f);
+                if (i == ".txt")
+                {
+                    var excelApp = new Excel.Application();
+                    excelApp.Visible = true;
+                    Excel.Workbooks books = excelApp.Workbooks;
+                    Excel.Workbooks wb1 = excelApp.Workbooks;
+                    Excel.Workbook sheet1 = wb1.Open(f);
+                    excelApp.Range["AG164:AG1027"].Value = excelApp.Range["PF164:PF1027"].Value;
+                }
+
+            }
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            string pb = pathbox1.Text;
+
+            foreach (string f in Directory.GetFiles(pb)) //each file in directory
+            {
+                string i = Path.GetExtension(f);
+                if (i == ".txt")
+                {
+                    var excelApp = new Excel.Application();
+                    excelApp.Visible = true;
+                    Excel.Workbooks books = excelApp.Workbooks;
+                    Excel.Workbooks wb1 = excelApp.Workbooks;
+                    Excel.Workbook sheet1 = wb1.Open(f);
+                    excelApp.Range["AH164:AH1027"].Value = excelApp.Range["NK164:NK1027"].Value;
+                }
+
+            }
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            string pb = pathbox1.Text;
+
+            foreach (string f in Directory.GetFiles(pb)) //each file in directory
+            {
+                string i = Path.GetExtension(f);
+                if (i == ".txt")
+                {
+                    var excelApp = new Excel.Application();
+                    excelApp.Visible = true;
+                    Excel.Workbooks books = excelApp.Workbooks;
+                    Excel.Workbooks wb1 = excelApp.Workbooks;
+                    Excel.Workbook sheet1 = wb1.Open(f);
+                    excelApp.Range["Z127:Z894"].Value = excelApp.Range["IE127:IE894"].Value;
+                }
+
+            }
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            string pb = pathbox1.Text;
+
+            foreach (string f in Directory.GetFiles(pb)) //each file in directory
+            {
+                string i = Path.GetExtension(f);
+                if (i == ".txt")
+                {
+                    var excelApp = new Excel.Application();
+                    excelApp.Visible = true;
+                    Excel.Workbooks books = excelApp.Workbooks;
+                    Excel.Workbooks wb1 = excelApp.Workbooks;
+                    Excel.Workbook sheet1 = wb1.Open(f);
+                    excelApp.Range["AE164:AF932"].Value = excelApp.Range["MX164:MY932"].Value;
+                }
+            }
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            string pb = pathbox1.Text;
+
+            foreach (string f in Directory.GetFiles(pb)) //each file in directory
+            {
+                string i = Path.GetExtension(f);
+                if (i == ".txt")
+                {
+                    var excelApp = new Excel.Application();
+                    excelApp.Visible = true;
+                    Excel.Workbooks books = excelApp.Workbooks;
+                    Excel.Workbooks wb1 = excelApp.Workbooks;
+                    Excel.Workbook sheet1 = wb1.Open(f);
+                    excelApp.Range["AJ164:AJ1000"].Value = excelApp.Range["RA164:RA1000"].Value;
+                }
+            }
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            string pb = pathbox1.Text;
+
+            foreach (string f in Directory.GetFiles(pb)) //each file in directory
+            {
+                string i = Path.GetExtension(f);
+                if (i == ".txt")
+                {
+                    var excelApp = new Excel.Application();
+                    excelApp.Visible = true;
+                    Excel.Workbooks books = excelApp.Workbooks;
+                    Excel.Workbooks wb1 = excelApp.Workbooks;
+                    Excel.Workbook sheet1 = wb1.Open(f);
+                    excelApp.Cells[156, 339] = "CHECK BENDING";
+                    excelApp.Cells[158, 339] = "CHECK";
+                    excelApp.Cells[159, 339] = "BENDING";
+                    excelApp.Cells[160, 339] = "tCHECKBENDING";
+                    excelApp.Cells[161, 339] = "547";
+                    excelApp.Range["MA173:MA196"].Value = 0;
+                    excelApp.Range["MA197:MA220"].Value = 1.5;
+                    excelApp.Range["MA221:MA244"].Value = 3;
+                }
+            }
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            string pb = pathbox1.Text;
+
+            foreach (string f in Directory.GetFiles(pb)) //each file in directory
+            {
+                string i = Path.GetExtension(f);
+                if (i == ".txt")
+                {
+                    var excelApp = new Excel.Application();
+                    excelApp.Visible = true;
+                    Excel.Workbooks books = excelApp.Workbooks;
+                    Excel.Workbooks wb1 = excelApp.Workbooks;
+                    Excel.Workbook sheet1 = wb1.Open(f);
+                    excelApp.Range["AK173:AK1000"].Value = excelApp.Range["LI173:LI1000"].Value;
+                }
+            }
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            string pb = pathbox1.Text;
+
+            foreach (string f in Directory.GetFiles(pb)) //each file in directory
+            {
+                string i = Path.GetExtension(f);
+                if (i == ".txt")
+                {
+                    var excelApp = new Excel.Application();
+                    excelApp.Visible = true;
+                    Excel.Workbooks books = excelApp.Workbooks;
+                    Excel.Workbooks wb1 = excelApp.Workbooks;
+                    Excel.Workbook sheet1 = wb1.Open(f);
+                    excelApp.Range["AE210:AE977"].Value = excelApp.Range["OX164:OX977"].Value;
+                }
+            }
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            string pb = pathbox1.Text;
+
+            foreach (string f in Directory.GetFiles(pb)) //each file in directory
+            {
+                string i = Path.GetExtension(f);
+                if (i == ".txt")
+                {
+                    var excelApp = new Excel.Application();
+                    excelApp.Visible = true;
+                    Excel.Workbooks books = excelApp.Workbooks;
+                    Excel.Workbooks wb1 = excelApp.Workbooks;
+                    Excel.Workbook sheet1 = wb1.Open(f);
+                    excelApp.Range["K186:CK197"].Value = excelApp.Range["CL174:FL185"].Value;
+                    excelApp.Range["K198:CK209"].Value = excelApp.Range["FM174:IM185"].Value;
+                    excelApp.Range["K210:CK221"].Value = excelApp.Range["IN174:LN185"].Value;
+                    excelApp.Range["K222:CK233"].Value = excelApp.Range["LO174:OO185"].Value;
+                    excelApp.Range["K234:CK245"].Value = excelApp.Range["OP174:RP185"].Value;
+                    excelApp.Range["K246:CK257"].Value = excelApp.Range["RQ174:UQ185"].Value;
+                    excelApp.Range["K258:CK269"].Value = excelApp.Range["UR174:XR185"].Value;
+                    excelApp.Range["K270:CK281"].Value = excelApp.Range["XS174:AAS185"].Value;
+                    excelApp.Range["K282:CK293"].Value = excelApp.Range["AAT174:ADT185"].Value;
+                    excelApp.Range["K294:CK305"].Value = excelApp.Range["ADU174:AGU185"].Value;
+                    excelApp.Range["K306:CK317"].Value = excelApp.Range["AGV174:AJV185"].Value;
+                    excelApp.Range["K318:CK329"].Value = excelApp.Range["AJW174:AMW185"].Value;
+                    excelApp.Range["CL174:CL185"].Value = 1;
+                    excelApp.Range["CL186:CL197"].Value = 2;
+                    excelApp.Range["CL198:CL209"].Value = 3;
+                    excelApp.Range["CL210:CL221"].Value = 4;
+                    excelApp.Range["CL222:CL233"].Value = 5;
+                    excelApp.Range["CL234:CL245"].Value = 6;
+                    excelApp.Range["CL246:CL257"].Value = 7;
+                    excelApp.Range["CL258:CL269"].Value = 8;
+                    excelApp.Range["CL270:CL281"].Value = 9;
+                    excelApp.Range["CL282:CL293"].Value = 10;
+                    excelApp.Range["CL294:CL305"].Value = 11;
+                    excelApp.Range["CL306:CL317"].Value = 12;
+                    excelApp.Range["CL318:CL329"].Value = 13;
+                    excelApp.Cells[157, 90] = "SWEEP LOOP";
+                    excelApp.Cells[159, 90] = "SWEEP";
+                    excelApp.Cells[160, 90] = "LOOP";
+                    excelApp.Cells[161, 90] = "tSWEEPLOOP";
+                    excelApp.Cells[162, 90] = "547";
+                }
+            }
+        }
+    }
+}
